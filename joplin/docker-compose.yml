@@ -15,11 +15,11 @@ services:
     depends_on:
       - db
     ports:
-      - "22300:22300"
+      - "8087:8087"
     restart: unless-stopped
     user: "1001:1001"
     environment:
-      - APP_PORT=22300
+      - APP_PORT=8087
       - APP_BASE_URL=${APP_BASE_URL}
       - DB_CLIENT=pg
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
